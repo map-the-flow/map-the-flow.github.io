@@ -221,44 +221,37 @@
 <!--</section>-->
 
 
-<!--<section class="section">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    &lt;!&ndash; Abstract. &ndash;&gt;-->
-<!--    <div class="columns is-centered has-text-centered">-->
-<!--      <div class="column is-four-fifths">-->
-<!--        <h2 class="title is-3">Abstract</h2>-->
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            We present the first method capable of photorealistically reconstructing a non-rigidly-->
-<!--            deforming scene using photos/videos captured casually from mobile phones.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            Our approach augments neural radiance fields-->
-<!--            (NeRF) by optimizing an-->
-<!--            additional continuous volumetric deformation field that warps each observed point into a-->
-<!--            canonical 5D NeRF.-->
-<!--            We observe that these NeRF-like deformation fields are prone to local minima, and-->
-<!--            propose a coarse-to-fine optimization method for coordinate-based models that allows for-->
-<!--            more robust optimization.-->
-<!--            By adapting principles from geometry processing and physical simulation to NeRF-like-->
-<!--            models, we propose an elastic regularization of the deformation field that further-->
-<!--            improves robustness.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie-->
-<!--            photos/videos into deformable NeRF-->
-<!--            models that allow for photorealistic renderings of the subject from arbitrary-->
-<!--            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data-->
-<!--            using a-->
-<!--            rig with two mobile phones that take time-synchronized photos, yielding train/validation-->
-<!--            images of the same pose at different viewpoints. We show that our method faithfully-->
-<!--            reconstructs non-rigidly deforming scenes and reproduces unseen views with high-->
-<!--            fidelity.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Abstract. &ndash;&gt;-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          Video Large Language Models (VideoLLMs) extend the capabilities of vision-language models
+          to spatiotemporal inputs, enabling tasks such as video question answering (VideoQA). Despite
+          recent advances in VideoLLMs, their internal mechanisms on <i>where</i> and <i>how</i> they
+          extract and propagate video and textual information remain less explored. In this study, we
+          investigate the internal information flow of VideoLLMs using mechanistic interpretability
+          techniques. Our analysis reveals consistent patterns across diverse VideoQA tasks: (1)
+          <i>temporal reasoning</i> in VideoLLMs initiates with active <i>cross-frame interactions</i>
+          in early-to-middle layers, (2) followed by progressive <i>video-language integration</i> in
+          middle layers. This is facilitated by alignment between video representations and linguistic
+          embeddings containing <i>temporal concepts</i>. (3) Upon completion of this integration, the
+          model is ready to generate correct answers in middle-to-late layers. (4) Based on our
+          analysis, we show that VideoLLMs can retain their VideoQA performance by selecting these
+          effective information pathways while suppressing a substantial amount of attention edges,
+          e.g., 58% in LLaVA-NeXT-7B-Video-FT. These findings provide a blueprint on how VideoLLMs
+          perform temporal reasoning and offer practical insights for improving model interpretability
+          and downstream generalization.
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
 
 <!--    &lt;!&ndash; Paper video. &ndash;&gt;-->
 <!--    <div class="columns is-centered has-text-centered">-->
