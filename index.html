@@ -496,12 +496,20 @@
         <h2 class="title is-3">Our Findings</h2>
 
         <!-- Active Temporal Interaction -->
-        <h3 class="title is-4">Active Temporal Interaction Within Video Tokens</h3>
+        <h3 class="title is-4">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
         <div class="content has-text-justified">
           <p>
             Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.
-            Our analysis using Attention Knockout <a href="https://arxiv.org/abs/2302.09108">[Geva et al., 2023]</a>, which selectively disconnects attention edges to quantify their impact,
+            Our analysis using Attention Knockout [Geva et al., 2023], which selectively disconnects attention edges to quantify their impact,
             shows this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.
+          </p>
+        </div>
+
+        <!-- Figure -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/fig2_cross_frame.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
+          <p class="has-text-centered" style="margin-top:0.5em;">
+            <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong> Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected.
           </p>
         </div>
 
