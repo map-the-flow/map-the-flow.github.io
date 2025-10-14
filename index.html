@@ -516,17 +516,53 @@
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/tab2_cross_frame_impact.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
-            <strong>Impact of cross-frame attention on answer generation.</strong> We block cross-frame attention in the first half of the total layers and measure the resulting accuracy drop. Without cross-frame attention, the model generates incorrect or even opposite answers to the given videos.
+            <strong>Impact of cross-frame attention on answer generation.</strong> We block cross-frame attention in the first half of the total layers and measure the resulting accuracy drop. Without cross-frame attention, the model generates incorrect or even opposite answers to the given videos. This suggests that VideoLLMs rely heavily on cross-frame interactions in the early
+stage to reason about temporal events.
           </p>
         </div>
 
         <!-- Video-Language Integration -->
-        <h3 class="title is-4">Video-Language Integration on Temporal Keywords in Middle Layers</h3>
+        <h3 class="title is-4">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
         <div class="content has-text-justified">
           <p>
-            Analyzing semantic concepts in video tokens through Logit Lens <a href="https://arxiv.org/abs/2010.00736">[Nostalgebraist, 2020]</a> shows that temporal concepts are emergent among video tokens in the vocabulary space.
+            Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that temporal concepts are emergent among video tokens in the vocabulary space.
             Alignment between these representations and temporal keyword embeddings facilitates selective video-language integration over relevant question tokens in early-to-middle layers,
             which is followed by information converging to the last position token in middle-to-late layers.
+          </p>
+        </div>
+
+        <!-- Figure3 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/fig3_overall_cross_modal_flow.png" alt="Overall cross-modal flow" style="width:100%; max-width:800px;">
+          <p class="has-text-centered" style="margin-top:0.5em;">
+            <strong>Overall cross-modal information flow in VideoLLMs.</strong>
+            We analyze changes in the prediction probability when intervening on attention edges between video, question,
+            and last token (i.e., the starting position for answer generation).
+            Information from the video tokens is conveyed to the question tokens in the early-to-middle layers, followed
+            by the transfer of information from the question tokens to the last token in the middle-to-late layers.
+          </p>
+        </div>
+
+        <!-- Figure4 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:800px;">
+          <p class="has-text-centered" style="margin-top:0.5em;">
+            <strong>Emergence of temporal concepts in video tokens.</strong>
+            When we plot the normalized frequency of spatial and temporal keywords extracted from video tokens via Logit Lens,
+            spatial concepts start to appear in the very early layers, whereas temporal concepts develop later in the middle layers.
+          </p>
+        </div>
+
+        <!-- Figure5 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/fig5_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:800px;">
+          <p class="has-text-centered" style="margin-top:0.5em;">
+            <strong>Video-language alignment enables selective spatiotemporal propagation.</strong>
+            Visualization of video-to-question attention maps.
+            (a) With spatiotemporal interactions, each question token attends to semantically relevant regions:
+            ``begins'' focuses on blue sphere at start, ``ends'' on blue sphere and green square at end.
+            (b) When temporal interactions among video tokens are blocked, video-text alignment fails and text tokens
+            instead attend to positionally proximate regions rather than semantically relevant ones.
           </p>
         </div>
 
