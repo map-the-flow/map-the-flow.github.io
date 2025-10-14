@@ -222,31 +222,35 @@
       <img src="./static/images/teaser.jpg" alt="VideoLLMs findings" style="width:100%; max-width:100%; margin-bottom:1em;" />
 
       <!-- Caption -->
-      <div class="content has-text-left">
-        <p><strong>Summary of our findings on VideoLLMs' information flow.</strong></p>
-        <p>
-          <strong>(a)</strong> Temporal reasoning begins with cross-frame interactions within video tokens at early-middle layers
-          <span style="color:#4DAF4A;">[green]</span>, followed by video-language integration into temporal keywords in the question
-          <span style="color:#984EA3;">[purple]</span>. This information is conveyed to the last token at middle-late layers
-          <span style="color:#FF7F00;">[orange]</span>, where answer generation occurs
-          <span style="color:#FFB302;">[yellow]</span>.
-        </p>
-        <p>
-          <strong>(b)</strong> These effective pathways are identified via Attention Knockout, which disconnects attention pairs and
-          tracks the drop in probability of the final answer to quantify their impact.
-        </p>
-        <p>
-          <strong>(c)</strong> Layer-wise answer probability rises immediately after video-language integration, indicating that
-          the model is ready to predict correct answers after the middle layers.
-        </p>
-        <p>
-          Based on our analysis, we show that VideoLLMs can retain their VideoQA performance by selecting effective information pathways
-          while suppressing a substantial amount of attention edges, e.g., 58% in LLaVA-NeXT-7B-Video-FT.
-        </p>
+      <div class="column" style="max-width:700px; margin:0 auto;">
+        <div class="content has-text-left">
+          <p><strong>Summary of our findings on VideoLLMs' information flow.</strong></p>
+          <p>
+            <strong>(a)</strong> Temporal reasoning begins with cross-frame interactions within video tokens at early-middle layers
+            <span style="color:#4DAF4A;">[green]</span>, followed by video-language integration into temporal keywords in the question
+            <span style="color:#984EA3;">[purple]</span>. This information is conveyed to the last token at middle-late layers
+            <span style="color:#FF7F00;">[orange]</span>, where answer generation occurs
+            <span style="color:#FFB302;">[yellow]</span>.
+          </p>
+          <p>
+            <strong>(b)</strong> These effective pathways are identified via Attention Knockout, which disconnects attention pairs and
+            tracks the drop in probability of the final answer to quantify their impact.
+          </p>
+          <p>
+            <strong>(c)</strong> Layer-wise answer probability rises immediately after video-language integration, indicating that
+            the model is ready to predict correct answers after the middle layers.
+          </p>
+          <p>
+            Based on our analysis, we show that VideoLLMs can retain their VideoQA performance by selecting effective information pathways
+            while suppressing a substantial amount of attention edges, e.g., 58% in LLaVA-NeXT-7B-Video-FT.
+          </p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
 
