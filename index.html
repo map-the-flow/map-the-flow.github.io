@@ -269,6 +269,9 @@
         <p>
           <strong>(c)</strong> Layer-wise answer probability rises immediately after video-language integration, indicating that
           the model is ready to predict correct answers after the middle layers.
+        <p>
+          Based on our analysis, we show that VideoLLMs can retain their VideoQA performance by selecting effective information pathways
+          while suppressing a substantial amount of attention edges, e.g., 58% in LLaVA-NeXT-7B-Video-FT.
         </p>
       </div>
     </div>
@@ -496,7 +499,7 @@
         <h2 class="title is-3" style="margin-bottom:2rem;">Our Findings</h2>
 
         <!-- Active Temporal Interaction -->
-        <h3 class="title is-4" style="margin-bottom:1rem;">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
+        <h3 class="title is-4" style="margin-bottom:2rem;">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
         <div class="content has-text-justified" style="margin-bottom:2rem;">
           <p>
             Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.
@@ -523,7 +526,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Video-Language Integration -->
-        <h3 class="title is-4" style="margin-bottom:1rem;">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
+        <h3 class="title is-4" style="margin-top:3rem; margin-bottom:2rem;">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
         <div class="content has-text-justified" style="margin-bottom:2rem;">
           <p>
             Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that temporal concepts are emergent among video tokens in the vocabulary space.
@@ -568,7 +571,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Answer Generation -->
-        <h3 class="title is-4" style="margin-bottom:1rem;">3. Answer Generation at Middle-to-Late Layers</h3>
+        <h3 class="title is-4" style="margin-top:3rem; margin-bottom:2rem;">3. Answer Generation at Middle-to-Late Layers</h3>
         <!-- Figure8 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig8_answer_generation.png" alt="Answer generation" style="width:100%; max-width:800px;">
@@ -578,7 +581,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Effective Information Flow -->
-        <h3 class="title is-4" style="margin-bottom:1rem;">4. Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
+        <h3 class="title is-4" style="margin-top:3rem; margin-bottom:2rem;">4. Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
         <!-- Tab3 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/tab3_information_flow_pathways.png" alt="Effective information flow pathways" style="width:100%; max-width:800px;">
