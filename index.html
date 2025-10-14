@@ -532,9 +532,9 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure3 -->
-        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig3_overall_cross_modal_flow.png" alt="Overall cross-modal flow" style="width:100%; max-width:800px;">
-          <p class="has-text-centered" style="margin-top:0.5em;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Overall cross-modal information flow in VideoLLMs.</strong>
             We analyze changes in the prediction probability when intervening on attention edges between video, question,
             and last token (i.e., the starting position for answer generation).
@@ -544,9 +544,9 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure4 -->
-        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:800px;">
-          <p class="has-text-centered" style="margin-top:0.5em;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Emergence of temporal concepts in video tokens.</strong>
             When we plot the normalized frequency of spatial and temporal keywords extracted from video tokens via Logit Lens,
             spatial concepts start to appear in the very early layers, whereas temporal concepts develop later in the middle layers.
@@ -554,9 +554,9 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure5 -->
-        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig5_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:800px;">
-          <p class="has-text-centered" style="margin-top:0.5em;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Video-language alignment enables selective spatiotemporal propagation.</strong>
             In this video-to-question attention maps,
             (a) with spatiotemporal interactions, each question token attends to semantically relevant regions:
@@ -567,17 +567,21 @@ stage to reason about temporal events.
         </div>
 
         <!-- Answer Generation -->
-        <h3 class="title is-4">Answer Generation at Middle-to-Late Layers</h3>
-        <div class="content has-text-justified">
-          <p>
+        <h3 class="title is-4">3. Answer Generation at Middle-to-Late Layers</h3>
+        <!-- Figure8 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/fig8_answer_generation.png" alt="Answer generation" style="width:100%; max-width:800px;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             Tracing layer-wise answer probability at the last token reveals that the model is prepared to generate a correct answer immediately once the video-language integration concludes after middle layers.
           </p>
         </div>
 
         <!-- Effective Information Flow -->
-        <h3 class="title is-4">Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
-        <div class="content has-text-justified">
-          <p>
+        <h3 class="title is-4">4. Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
+        <!-- Tab3 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+          <img src="./static/images/tab3_information_flow_pathways.png" alt="Effective information flow pathways" style="width:100%; max-width:800px;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             To validate the above findings, we disable all information pathways except those identified as critical.
             Evaluation on VideoQA benchmarks shows that the models retain performance comparable to baselines,
             demonstrating that these effective pathways suffice for accurate answer generation.
