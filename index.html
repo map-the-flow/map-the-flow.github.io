@@ -146,21 +146,35 @@
   </div>
 </section>
 
-<!--<section class="hero teaser">-->
-<!--  <div class="container is-max-desktop">-->
-<!--    <div class="hero-body">-->
-<!--      <video id="teaser" autoplay muted loop playsinline height="100%">-->
-<!--        <source src="./static/videos/teaser.mp4"-->
-<!--                type="video/mp4">-->
-<!--      </video>-->
-<!--      <h2 class="subtitle has-text-centered">-->
-<!--        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into-->
-<!--        free-viewpoint-->
-<!--        portraits.-->
-<!--      </h2>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="hero-body has-text-centered">
+      <!-- Figure / Image -->
+      <img src="static/images/teaser.pdf" alt="VideoLLMs findings" style="width:100%; max-width:100%; margin-bottom:1em;" />
+
+      <!-- Caption -->
+      <div class="content has-text-left">
+        <p><strong>Summary of our findings on VideoLLMs' information flow.</strong></p>
+        <p>
+          <strong>(a)</strong> Temporal reasoning begins with cross-frame interactions within video tokens at early-middle layers
+          <span style="color:#4DAF4A;">[green]</span>, followed by video-language integration into temporal keywords in the question
+          <span style="color:#984EA3;">[purple]</span>. This information is conveyed to the last token at middle-late layers
+          <span style="color:#FF7F00;">[orange]</span>, where answer generation occurs
+          <span style="color:#FFB302;">[yellow]</span>.
+        </p>
+        <p>
+          <strong>(b)</strong> These effective pathways are identified via Attention Knockout, which disconnects attention pairs and
+          tracks the drop in probability of the final answer to quantify their impact.
+        </p>
+        <p>
+          <strong>(c)</strong> Layer-wise answer probability rises immediately after video-language integration, indicating that
+          the model is ready to predict correct answers after the middle layers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!--<section class="hero is-light is-small">-->
