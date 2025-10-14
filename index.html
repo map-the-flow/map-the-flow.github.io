@@ -335,7 +335,7 @@
           <img src="./static/images/fig2_cross_frame.png" alt="Cross-frame attention impact" style="width:100%; max-width:90%;">
           <p class="has-text-justified" style="margin-top:1em;">
             <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong>
-            We use Attention Knockout [Geva et al., 2023] to selectively disconnects attention edges to quantify their impact.
+            We use Attention Knockout to selectively disconnects attention edges to quantify their impact.
             Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected,
             showing that this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.
           </p>
@@ -377,7 +377,7 @@ stage to reason about temporal events.
           <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:90%;">
           <p class="has-text-justified" style="margin-top:1em;">
             <strong>Emergence of temporal concepts in video tokens.</strong>
-            Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that
+            Analyzing semantic concepts in video tokens through Logit Lens shows that
             temporal concepts are emergent among video tokens in the vocabulary space.
             Interestingly, spatial concepts start to appear in the very early layers, whereas temporal concepts develop later in the middle layers.
           </p>
