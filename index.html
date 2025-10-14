@@ -441,19 +441,22 @@
 
         <!-- Active Temporal Interaction -->
         <h3 class="title is-4" style="margin-bottom:2rem;">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
-        <div class="content has-text-justified" style="margin-bottom:2rem;">
-          <p>
-            Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.
-            Our analysis using Attention Knockout [Geva et al., 2023], which selectively disconnects attention edges to quantify their impact,
-            shows this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.
-          </p>
-        </div>
+<!--        <div class="content has-text-justified" style="margin-bottom:2rem;">-->
+<!--          <p>-->
+<!--            Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.-->
+<!--            Our analysis using Attention Knockout [Geva et al., 2023], which selectively disconnects attention edges to quantify their impact,-->
+<!--            shows this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.-->
+<!--          </p>-->
+<!--        </div>-->
 
         <!-- Figure2 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig2_cross_frame.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
-            <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong> Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected.
+            <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong>
+            We use Attention Knockout [Geva et al., 2023] to selectively disconnects attention edges to quantify their impact.
+            Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected,
+            showing that this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.
           </p>
         </div>
 
@@ -468,13 +471,13 @@ stage to reason about temporal events.
 
         <!-- Video-Language Integration -->
         <h3 class="title is-4" style="margin-top:3rem; margin-bottom:2rem;">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
-        <div class="content has-text-justified" style="margin-bottom:2rem;">
-          <p>
-            Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that temporal concepts are emergent among video tokens in the vocabulary space.
-            Alignment between these representations and temporal keyword embeddings facilitates selective video-language integration over relevant question tokens in early-to-middle layers,
-            which is followed by information converging to the last position token in middle-to-late layers.
-          </p>
-        </div>
+<!--        <div class="content has-text-justified" style="margin-bottom:2rem;">-->
+<!--          <p>-->
+<!--            Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that temporal concepts are emergent among video tokens in the vocabulary space.-->
+<!--            Alignment between these representations and temporal keyword embeddings facilitates selective video-language integration over relevant question tokens in early-to-middle layers,-->
+<!--            which is followed by information converging to the last position token in middle-to-late layers.-->
+<!--          </p>-->
+<!--        </div>-->
 
         <!-- Figure3 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
@@ -493,8 +496,9 @@ stage to reason about temporal events.
           <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Emergence of temporal concepts in video tokens.</strong>
-            When we plot the normalized frequency of spatial and temporal keywords extracted from video tokens via Logit Lens,
-            spatial concepts start to appear in the very early layers, whereas temporal concepts develop later in the middle layers.
+            Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that
+            temporal concepts are emergent among video tokens in the vocabulary space.
+            Interestingly, spatial concepts start to appear in the very early layers, whereas temporal concepts develop later in the middle layers.
           </p>
         </div>
 
