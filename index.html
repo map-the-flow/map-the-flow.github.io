@@ -256,7 +256,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
-        <div class="column" style="max-width:700px; margin:0 auto; font-size:0.95rem;">
+        <div class="column is-four-fifths" style="font-size:0.95rem;">
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             Video Large Language Models (VideoLLMs) extend the capabilities of vision-language models
@@ -265,10 +265,10 @@
             extract and propagate video and textual information remain less explored. In this study, we
             investigate the internal information flow of VideoLLMs using mechanistic interpretability
             techniques. Our analysis reveals consistent patterns across diverse VideoQA tasks: (1)
-            <i>temporal reasoning</i> in VideoLLMs initiates with active <i>cross-frame interactions</i>
-            in early-to-middle layers, (2) followed by progressive <i>video-language integration</i> in
+            temporal reasoning in VideoLLMs initiates with active cross-frame interactions
+            in early-to-middle layers, (2) followed by progressive video-language integration in
             middle layers. This is facilitated by alignment between video representations and linguistic
-            embeddings containing <i>temporal concepts</i>. (3) Upon completion of this integration, the
+            embeddings containing temporal concepts. (3) Upon completion of this integration, the
             model is ready to generate correct answers in middle-to-late layers. (4) Based on our
             analysis, we show that VideoLLMs can retain their VideoQA performance by selecting these
             effective information pathways while suppressing a substantial amount of attention edges,
