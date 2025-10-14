@@ -460,11 +460,13 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Active Temporal Interaction -->
+    <!-- Our Findings -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Active Temporal Interaction Within Video Tokens</h2>
-        <h3 class="title is-4">(\S~\ref{sec:temporal})</h3>
+        <h2 class="title is-3">Our Findings</h2>
+
+        <!-- Active Temporal Interaction -->
+        <h3 class="title is-4">Active Temporal Interaction Within Video Tokens</h3>
         <div class="content has-text-justified">
           <p>
             Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.
@@ -472,15 +474,9 @@
             shows this capability is uniquely acquired through VideoQA instruction tuning from base ImageLLMs.
           </p>
         </div>
-      </div>
-    </div>
-    <!--/ Active Temporal Interaction -->
 
-    <!-- Video-Language Integration -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Video-Language Integration on Temporal Keywords in Middle Layers</h2>
-        <h3 class="title is-4">(\S~\ref{sec:flow_integ})</h3>
+        <!-- Video-Language Integration -->
+        <h3 class="title is-4">Video-Language Integration on Temporal Keywords in Middle Layers</h3>
         <div class="content has-text-justified">
           <p>
             Analyzing semantic concepts in video tokens through Logit Lens <a href="https://arxiv.org/abs/2010.00736">[Nostalgebraist, 2020]</a> shows that temporal concepts are emergent among video tokens in the vocabulary space.
@@ -488,29 +484,17 @@
             which is followed by information converging to the last position token in middle-to-late layers.
           </p>
         </div>
-      </div>
-    </div>
-    <!--/ Video-Language Integration -->
 
-    <!-- Answer Generation -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Answer Generation at Middle-to-Late Layers</h2>
-        <h3 class="title is-4">(\S~\ref{sec:answer_gen})</h3>
+        <!-- Answer Generation -->
+        <h3 class="title is-4">Answer Generation at Middle-to-Late Layers</h3>
         <div class="content has-text-justified">
           <p>
             Tracing layer-wise answer probability at the last token reveals that the model is prepared to generate a correct answer immediately once the video-language integration concludes after middle layers.
           </p>
         </div>
-      </div>
-    </div>
-    <!--/ Answer Generation -->
 
-    <!-- Effective Information Flow -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h2>
-        <h3 class="title is-4">(\S~\ref{sec:eff_info_flow})</h3>
+        <!-- Effective Information Flow -->
+        <h3 class="title is-4">Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
         <div class="content has-text-justified">
           <p>
             To validate the above findings, we disable all information pathways except those identified as critical.
@@ -518,9 +502,10 @@
             demonstrating that these effective pathways suffice for accurate answer generation.
           </p>
         </div>
+
       </div>
     </div>
-    <!--/ Effective Information Flow -->
+    <!--/ Our Findings -->
 
   </div>
 </section>
