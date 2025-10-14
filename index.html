@@ -506,14 +506,14 @@
         </div>
 
         <!-- Figure2 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig2_cross_frame.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
             <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong> Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected.
           </p>
         </div>
         <!-- Table2 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/tab2_cross_frame_impact.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
             <strong>Impact of cross-frame attention on answer generation.</strong> We block cross-frame attention in the first half of the total layers and measure the resulting accuracy drop. Without cross-frame attention, the model generates incorrect or even opposite answers to the given videos. This suggests that VideoLLMs rely heavily on cross-frame interactions in the early
@@ -532,7 +532,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure3 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig3_overall_cross_modal_flow.png" alt="Overall cross-modal flow" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
             <strong>Overall cross-modal information flow in VideoLLMs.</strong>
@@ -544,7 +544,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure4 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
             <strong>Emergence of temporal concepts in video tokens.</strong>
@@ -554,13 +554,13 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure5 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
           <img src="./static/images/fig5_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:800px;">
           <p class="has-text-centered" style="margin-top:0.5em;">
             <strong>Video-language alignment enables selective spatiotemporal propagation.</strong>
-            Visualization of video-to-question attention maps.
-            (a) With spatiotemporal interactions, each question token attends to semantically relevant regions:
-            ``begins'' focuses on blue sphere at start, ``ends'' on blue sphere and green square at end.
+            In this video-to-question attention maps,
+            (a) with spatiotemporal interactions, each question token attends to semantically relevant regions:
+            "begins" focuses on blue sphere at start, "ends" on blue sphere and green square at end.
             (b) When temporal interactions among video tokens are blocked, video-text alignment fails and text tokens
             instead attend to positionally proximate regions rather than semantically relevant ones.
           </p>
