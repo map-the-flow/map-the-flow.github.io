@@ -493,11 +493,11 @@
     <!-- Our Findings -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Our Findings</h2>
+        <h2 class="title is-3" style="margin-bottom:2rem;">Our Findings</h2>
 
         <!-- Active Temporal Interaction -->
-        <h3 class="title is-4">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
-        <div class="content has-text-justified">
+        <h3 class="title is-4" style="margin-bottom:1rem;">1. Active Temporal Interaction Within Video Tokens in Early-to-Middle Layers</h3>
+        <div class="content has-text-justified" style="margin-bottom:2rem;">
           <p>
             Temporal reasoning begins by building spatiotemporal representations from video tokens through focused cross-frame attention in early-to-middle layers.
             Our analysis using Attention Knockout [Geva et al., 2023], which selectively disconnects attention edges to quantify their impact,
@@ -506,24 +506,25 @@
         </div>
 
         <!-- Figure2 -->
-        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig2_cross_frame.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
-          <p class="has-text-centered" style="margin-top:0.5em;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Training with VideoQA data boosts cross-frame interactions in the early-to-middle layers.</strong> Blocking cross-frame interactions in early-to-middle layers significantly harms LLaVA-NeXT-7B-Video-FT’s prediction, while LLaVA-NeXT-7B remains mostly unaffected.
           </p>
         </div>
+
         <!-- Table2 -->
-        <div class="content has-text-justified" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/tab2_cross_frame_impact.png" alt="Cross-frame attention impact" style="width:100%; max-width:800px;">
-          <p class="has-text-centered" style="margin-top:0.5em;">
+          <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Impact of cross-frame attention on answer generation.</strong> We block cross-frame attention in the first half of the total layers and measure the resulting accuracy drop. Without cross-frame attention, the model generates incorrect or even opposite answers to the given videos. This suggests that VideoLLMs rely heavily on cross-frame interactions in the early
 stage to reason about temporal events.
           </p>
         </div>
 
         <!-- Video-Language Integration -->
-        <h3 class="title is-4">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
-        <div class="content has-text-justified">
+        <h3 class="title is-4" style="margin-bottom:1rem;">2. Video-Language Integration on Temporal Keywords in Middle Layers</h3>
+        <div class="content has-text-justified" style="margin-bottom:2rem;">
           <p>
             Analyzing semantic concepts in video tokens through Logit Lens [Nostalgebraist, 2020] shows that temporal concepts are emergent among video tokens in the vocabulary space.
             Alignment between these representations and temporal keyword embeddings facilitates selective video-language integration over relevant question tokens in early-to-middle layers,
@@ -532,7 +533,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure3 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig3_overall_cross_modal_flow.png" alt="Overall cross-modal flow" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Overall cross-modal information flow in VideoLLMs.</strong>
@@ -544,7 +545,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure4 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig4_logit_lens.png" alt="Emergence of temporal concepts" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Emergence of temporal concepts in video tokens.</strong>
@@ -554,7 +555,7 @@ stage to reason about temporal events.
         </div>
 
         <!-- Figure5 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig5_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             <strong>Video-language alignment enables selective spatiotemporal propagation.</strong>
@@ -567,9 +568,9 @@ stage to reason about temporal events.
         </div>
 
         <!-- Answer Generation -->
-        <h3 class="title is-4">3. Answer Generation at Middle-to-Late Layers</h3>
+        <h3 class="title is-4" style="margin-bottom:1rem;">3. Answer Generation at Middle-to-Late Layers</h3>
         <!-- Figure8 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/fig8_answer_generation.png" alt="Answer generation" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             Tracing layer-wise answer probability at the last token reveals that the model is prepared to generate a correct answer immediately once the video-language integration concludes after middle layers.
@@ -577,9 +578,9 @@ stage to reason about temporal events.
         </div>
 
         <!-- Effective Information Flow -->
-        <h3 class="title is-4">4. Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
+        <h3 class="title is-4" style="margin-bottom:1rem;">4. Effective Information Flow Pathways Are Sufficient for Solving VideoQA Tasks</h3>
         <!-- Tab3 -->
-        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:2em;">
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
           <img src="./static/images/tab3_information_flow_pathways.png" alt="Effective information flow pathways" style="width:100%; max-width:800px;">
           <p class="has-text-justified" style="margin-top:0.5em;">
             To validate the above findings, we disable all information pathways except those identified as critical.
@@ -594,6 +595,7 @@ stage to reason about temporal events.
 
   </div>
 </section>
+
 
 
 
