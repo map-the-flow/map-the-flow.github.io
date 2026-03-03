@@ -392,7 +392,18 @@ stage to reason about temporal events.
 
         <!-- Figure5 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
-          <img src="./static/images/fig5_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:90%;">
+          <img src="static/images/fig5_logit_lens_vis.png" alt="Logit Lens visualization" style="width:100%; max-width:90%;">
+          <p class="has-text-justified" style="margin-top:1em;">
+            Visualization on a video sample shows reveal a sequential allocation of token positions:
+            the model first grounds spatial concepts (e.g., salient entities or attributes) at foreground tokens in early layers,
+            and later utilizes the remaining token positions to represent temporal dynamics,
+            rather than overriding the already stabilized spatial representations.
+          </p>
+        </div>
+
+        <!-- Figure6 -->
+        <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
+          <img src="static/images/fig6_video-to-question_attention.png" alt="Video-to-question attention" style="width:100%; max-width:90%;">
           <p class="has-text-justified" style="margin-top:1em;">
             <strong>Video-language alignment enables selective spatiotemporal propagation.</strong>
             In this video-to-question attention maps,
@@ -407,7 +418,7 @@ stage to reason about temporal events.
         <h3 class="title is-4" style="margin-top:5rem; margin-bottom:3rem;">3. Answer Generation at Middle-to-Late Layers</h3>
         <!-- Figure8 -->
         <div class="content has-text-centered" style="margin-top:1em; margin-bottom:3rem;">
-          <img src="./static/images/fig8_answer_generation.png" alt="Answer generation" style="width:100%; max-width:90%;">
+          <img src="static/images/fig9_answer_generation.png" alt="Answer generation" style="width:100%; max-width:90%;">
           <p class="has-text-justified" style="margin-top:1em;">
             Tracing layer-wise answer probability at the last token reveals that the model is prepared to generate a correct answer immediately once the video-language integration concludes after middle layers.
           </p>
